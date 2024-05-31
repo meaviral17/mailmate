@@ -1,7 +1,11 @@
 import React from 'react'
-
-export const Page = () => {
+import Home from '@/modules/home/home'
+import Header from '@/shared/widgets/header/header'
+const Page = () => {
   return (
-    <div>Page</div>
+    <><Header></Header>
+    <Home></Home></>
   )
 }
+
+export default Page
