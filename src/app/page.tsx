@@ -1,11 +1,11 @@
-import React from 'react'
-import Home from '@/modules/home/home'
-import Header from '@/shared/widgets/header/header'
+import Home from "@/modules/home/home";
+
 const Page = () => {
   return (
-    <><Header></Header>
-    <Home></Home></>
-  )
-}
+    <div>
+      <Home /> 
+    </div>
+  );
+};
 
-export default Page
+export default Page;
