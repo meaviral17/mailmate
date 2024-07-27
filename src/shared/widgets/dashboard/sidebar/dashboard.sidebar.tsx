@@ -9,9 +9,9 @@ const DashboardSideBar = () => {
   const { user } = useUser();
 
   return (
-    <div className="p-2">
-      <div className="p-2 flex items-center bg-[#f5f5f5f5] rounded">
-        <span className="text-2xl">{ICONS.home}</span>
+    <div className="p-2 bg-[#000] text-white"> {/* Background to black and text to white */}
+      <div className="p-2 flex items-center bg-[#1A1A2E] rounded"> {/* Dark blue background */}
+        <span className="text-2xl text-[#0f8b8d]">{ICONS.home}</span> {/* Icon color adjusted to a blue shade */}
         <h5 className="pl-2 pt-1 capitalize">{user?.username} Newsletter</h5>
       </div>
       <div>
