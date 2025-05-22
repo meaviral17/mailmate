@@ -61,7 +61,7 @@ const Banner = () => {
               className="text-xl !p-6"
               onClick={handleLogin} // Navigate to /sign-in
             >
-              Login
+              Login to Continue
             </Button>
           </div>
 
