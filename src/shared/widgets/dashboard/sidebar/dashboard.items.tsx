@@ -33,14 +33,14 @@ const DashboardItems = ({ bottomContent }: { bottomContent?: boolean }) => {
             >
               <span
                 className={`text-3xl mr-2 ${
-                  item.url === activeRoute && "text-[#463bbd]"
+                  item.url === activeRoute && "text-[#78faed]"
                 }`}
               >
                 {item.icon}
               </span>
               <span
                 className={`text-xl mr-2 ${
-                  item.url === activeRoute && "text-[#463bbd]"
+                  item.url === activeRoute && "text-[#78faed]"
                 }`}
               >
                 {item.title}
@@ -63,14 +63,14 @@ const DashboardItems = ({ bottomContent }: { bottomContent?: boolean }) => {
               >
                 <span
                   className={`text-3xl mr-2 ${
-                    item.url === activeRoute && "text-[#463bbd]"
+                    item.url === activeRoute && "text-[#78faed]"
                   }`}
                 >
                   {item.icon}
                 </span>
                 <span
                   className={`text-xl mr-2 ${
-                    item.url === activeRoute && "text-[#463bbd]"
+                    item.url === activeRoute && "text-[#78faed]"
                   }`}
                 >
                   {item.title}

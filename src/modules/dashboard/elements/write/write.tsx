@@ -50,11 +50,11 @@ const Write = () => {
   return (
     <div className="w-full flex p-5 flex-wrap gap-6 relative">
       <div
-        className="w-[200px] h-[200px] bg-slate-50 flex flex-col items-center justify-center rounded border cursor-pointer"
+        className="w-[200px] h-[200px] bg-slate-50 flex flex-col items-center justify-center rounded border cursor-pointer hover:shadow-md transition-shadow"
         onClick={() => setOpen(!open)}
       >
         <span className="text-2xl block text-center mb-3">{ICONS.plus}</span>
-        <h5 className="text-2xl">Create New</h5>
+        <h5 className="text-2xl font-medium">Create New</h5>
       </div>
 
       {/* saved emails */}
@@ -66,17 +66,17 @@ const Write = () => {
           return (
             <div
               key={i?._id}
-              className="w-[200px] h-[200px] z-[0] relative bg-slate-50 flex flex-col items-center justify-center rounded border cursor-pointer"
+              className="w-[200px] h-[200px] z-[0] relative bg-slate-50 flex flex-col items-center justify-center rounded border cursor-pointer hover:shadow-md transition-shadow"
             >
               <span
-                className="absolute block z-20 right-2 top-2 text-2xl cursor-pointer"
+                className="absolute block z-20 right-2 top-2 text-2xl cursor-pointer text-red-500 hover:text-red-700"
                 onClick={() => deleteHanlder(i?._id)}
               >
                 {ICONS.delete}
               </span>
               <Link
                 href={`/dashboard/new-email?subject=${formattedTitle}`}
-                className="text-xl"
+                className="text-xl font-medium text-blue-600 hover:underline"
               >
                 {i.title}
               </Link>
@@ -85,28 +85,32 @@ const Write = () => {
         })}
 
       {open && (
-        <div className="absolute flex items-center justify-center top-0 left-0 bg-[#00000028] h-screen w-full">
-          <div className="w-[600px] p-5 bg-white rounded shadow relative">
+        <div className="absolute flex items-center justify-center top-0 left-0 bg-[#00000080] h-screen w-full z-50">
+          <div className="w-[500px] p-6 bg-white rounded-lg shadow-lg relative">
             <div className="absolute top-3 right-3">
               <span
-                className="text-lg cursor-pointer"
+                className="text-lg cursor-pointer text-gray-500 hover:text-gray-700"
                 onClick={() => setOpen(!open)}
               >
                 {ICONS.cross}
               </span>
             </div>
-            <h5 className="text-2xl">Enter your Email subject</h5>
+            <h5 className="text-2xl font-semibold mb-4 text-gray-800">
+              Enter Your Email Subject
+            </h5>
+            <p className="text-sm text-gray-600 mb-4">
+              Provide a subject for your email. This will help you organize and identify your emails easily.
+            </p>
             <input
               type="text"
-              name=""
-              id=""
-              className="border w-full my-2 h-[35px] px-2 outline-none"
+              placeholder="Enter email subject"
+              className="border w-full my-2 h-[40px] px-3 rounded-lg outline-none focus:ring-2 focus:ring-blue-500"
               value={emailTitle}
               onChange={(e) => setEmailTitle(e.target.value)}
             />
             <Button
               color="primary"
-              className="rounded text-xl mt-3"
+              className="rounded-lg text-lg mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white"
               onClick={handleCreate}
             >
               Continue

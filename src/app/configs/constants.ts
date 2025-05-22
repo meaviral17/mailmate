@@ -60,16 +60,13 @@ export const GrowPlan: PlanType[] = [
 
 export const scalePlan: PlanType[] = [
   {
-    title: "Up to 100,000 subscribers",
+    title: "Upto 100000 subscribers",
   },
   {
     title: "Referal program",
   },
   {
     title: "AI support",
-  },
-  {
-    title: "Advanced support system",
   },
   {
     title: "Ad Network",
@@ -101,7 +98,7 @@ export const sideBarItems: DashboardSideBarTypes[] = [
     icon: ICONS.analytics,
   },
   {
-    title: "Audience",
+    title: "Subscribers",
     url: "/dashboard/audience",
     icon: ICONS.audience,
   },
@@ -115,7 +112,7 @@ export const sideBarBottomItems: DashboardSideBarTypes[] = [
   },
   {
     title: "View Site",
-    url: "/",
+    url: "/dashboard",
     icon: ICONS.world,
   },
 ];
@@ -125,14 +122,84 @@ export const subscribersData: subscribersDataTypes[] = [
     _id: "64f717a45331088de2ce886c",
     email: "programmershahriarsajeeb@gmail.com",
     createdAt: "5Feb 2024",
-    source: "Becodemy website",
+    source: "Mail Mate website",
     status: "subscribed",
   },
   {
     _id: "64f717a45331088de2ce886c",
-    email: "support@becodemy.com",
+    email: "support@mailmate.com",
     createdAt: "8Feb 2024",
     source: "External website",
     status: "subscribed",
+  },
+  {
+    _id: "64f717a45331088de2ce886d",
+    email: "john.doe@example.com",
+    createdAt: "10Feb 2024",
+    source: "Social media",
+    status: "subscribed",
+  },
+  {
+    _id: "64f717a45331088de2ce886e",
+    email: "jane.smith@example.com",
+    createdAt: "12Feb 2024",
+    source: "Mail Mate website",
+    status: "unsubscribed",
+  },
+  {
+    _id: "64f717a45331088de2ce886f",
+    email: "marketing@company.com",
+    createdAt: "15Feb 2024",
+    source: "External website",
+    status: "subscribed",
+  },
+  {
+    _id: "64f717a45331088de2ce8870",
+    email: "newsletter@domain.com",
+    createdAt: "18Feb 2024",
+    source: "Social media",
+    status: "subscribed",
+  },
+  {
+    _id: "64f717a45331088de2ce8871",
+    email: "alice.wonderland@example.com",
+    createdAt: "20Feb 2024",
+    source: "Mail Mate website",
+    status: "subscribed",
+  },
+  {
+    _id: "64f717a45331088de2ce8872",
+    email: "bob.builder@example.com",
+    createdAt: "22Feb 2024",
+    source: "External website",
+    status: "unsubscribed",
+  },
+  {
+    _id: "64f717a45331088de2ce8873",
+    email: "charlie.brown@example.com",
+    createdAt: "25Feb 2024",
+    source: "Social media",
+    status: "subscribed",
+  },
+  {
+    _id: "64f717a45331088de2ce8874",
+    email: "david.jones@example.com",
+    createdAt: "28Feb 2024",
+    source: "Mail Mate website",
+    status: "subscribed",
+  },
+  {
+    _id: "64f717a45331088de2ce8875",
+    email: "emily.clark@example.com",
+    createdAt: "1Mar 2024",
+    source: "External website",
+    status: "subscribed",
+  },
+  {
+    _id: "64f717a45331088de2ce8876",
+    email: "frank.castle@example.com",
+    createdAt: "3Mar 2024",
+    source: "Social media",
+    status: "unsubscribed",
   },
 ];

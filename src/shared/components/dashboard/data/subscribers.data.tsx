@@ -1,11 +1,15 @@
 'use client';
+import { subscribersData } from "@/app/configs/constants"; // Import the mock data
 import useSubscribersData from "@/shared/hooks/useSubscribersData";
 import { format } from "timeago.js";
 import { Box } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 
 const SubscribersData = () => {
-  const {data,loading} = useSubscribersData();
+  const { data, loading } = useSubscribersData();
+
+  // Use the mock data if the hook doesn't return any data
+  const effectiveData = data && data.length > 0 ? data : subscribersData;
 
   const columns = [
     { field: "id", headerName: "ID", flex: 0.5 },
@@ -27,17 +31,17 @@ const SubscribersData = () => {
   ];
 
   const rows: any = [];
-  
-  data?.forEach((i:subscribersDataTypes) => {
+
+  effectiveData?.forEach((i: subscribersDataTypes) => {
     rows.push({
-        id: i?._id,
-        email: i?.email,
-        createdAt: format(i?.createdAt),
-        source: i?.source,
-        status: i?.status,
-    })
-  })
-  
+      id: i?._id,
+      email: i?.email,
+      createdAt: format(i?.createdAt),
+      source: i?.source,
+      status: i?.status,
+    });
+  });
+
   return (
     <Box m="20px">
       <Box
@@ -92,10 +96,15 @@ const SubscribersData = () => {
           },
         }}
       >
-        <DataGrid checkboxSelection rows={rows} columns={columns} />
+        <DataGrid
+          checkboxSelection
+          rows={rows}
+          columns={columns}
+          loading={loading} // Show loading state if data is being fetched
+        />
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default SubscribersData
+export default SubscribersData;

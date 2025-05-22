@@ -24,7 +24,7 @@ const PricingCard = ({ active }: { active: string }) => {
           xmlns="http://www.w3.org/2000/svg"
           width="36"
           height="33"
-          fill="string"
+          fill="#F092DD"
           className="mb-4"
         >
           <path
@@ -54,7 +54,7 @@ const PricingCard = ({ active }: { active: string }) => {
           </div>
         ))}
         <br />
-        <Button color="primary" className="w-full text-xl !py-6">
+        <Button color="secondary" className="w-full text-xl !py-6">
           Get Started
         </Button>
         <p className="pt-1 opacity-[.7] text-center">
@@ -89,7 +89,7 @@ const PricingCard = ({ active }: { active: string }) => {
           <p className="text-lg">Billed {active}</p>
         </div>
         <div className="pt-5">
-          <p className="text-xl">Everything in Launch, plus...</p>
+          <p className="text-xl">Launch Benefits, plus...</p>
         </div>
         {GrowPlan.map((i: PlanType, index: number) => (
           <div key={index} className="flex w-full items-center py-4">
@@ -99,7 +99,7 @@ const PricingCard = ({ active }: { active: string }) => {
         ))}
         <br />
         <Button
-          color="primary"
+          color="secondary"
           className="w-full text-xl !py-6"
           onClick={() =>
             handleSubscription({
@@ -145,7 +145,7 @@ const PricingCard = ({ active }: { active: string }) => {
           <p className="text-lg">Billed {active}</p>
         </div>
         <div className="pt-5">
-          <p className="text-xl">Everything in Grow, plus...</p>
+          <p className="text-xl">Grow Benefits, plus...</p>
         </div>
         {scalePlan.map((i: PlanType, index: number) => (
           <div key={index} className="flex w-full items-center py-4">
@@ -155,7 +155,7 @@ const PricingCard = ({ active }: { active: string }) => {
         ))}
         <br />
         <Button
-          color="primary"
+          color="secondary"
           className="w-full text-xl !py-6"
           onClick={() =>
             handleSubscription({

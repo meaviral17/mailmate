@@ -36,7 +36,7 @@ const UserPlan = () => {
       <Slider
         aria-label="Player progress"
         hideThumb={true}
-        defaultValue={1}
+        defaultValue={40}
         className="max-w-md"
       />
       <h6 className="text-[#B8B8B8]">
