@@ -1,11 +1,3 @@
-Here’s the updated **README** with details about the **dependencies from the 
-
-.env
-
- file**, **Stripe-powered payments**, and **pricing plans**. These additions highlight the platform's monetization features and provide a comprehensive guide for setting up the environment variables.
-
----
-
 # **MailMate: The Ultimate AI Newsletter Platform**
 
 Welcome to **MailMate**, a cutting-edge AI-powered newsletter platform designed for creators, backed by experts. MailMate empowers users to create, manage, and grow their audience with ease, leveraging advanced analytics, seamless integrations, and a user-friendly interface.
@@ -217,38 +209,55 @@ Follow these steps to set up the project locally:
 
 ```
 src/
-├── app/
-│   ├── dashboard/
-│   │   ├── write/
-│   │   │   └── page.tsx
-│   │   ├── subscribers/
-│   │   │   └── page.tsx
-│   │   ├── pricing/
-│   │   │   └── page.tsx
-│   │   └── overview/
-│   │       └── page.tsx
-│   ├── success/
-│   │   └── page.tsx
-│   └── subscribe/
-│       └── page.tsx
-├── shared/
-│   ├── components/
-│   │   ├── cards/
-│   │   │   └── overview.card.tsx
-│   │   ├── charts/
-│   │   │   └── subscribers.chart.tsx
-│   │   ├── editor/
-│   │   │   └── drag-and-drop-editor.tsx
-│   │   ├── pricing/
-│   │   │   └── pricing.card.tsx
-│   │   └── layout/
-│   │       └── header.tsx
-│   ├── hooks/
-│   │   └── useSubscribersData.ts
-│   └── utils/
-│       └── icons.tsx
-└── styles/
-    └── globals.css
+├── app/                                # Next.js app directory for routing and pages
+│   ├── dashboard/                      # Dashboard-related pages
+│   │   ├── write/                      # Drag-and-drop newsletter editor
+│   │   │   └── page.tsx                # Page for creating newsletters
+│   │   ├── subscribers/                # Subscriber management
+│   │   │   └── page.tsx                # Page for managing subscribers
+│   │   ├── pricing/                    # Pricing plans and payments
+│   │   │   └── page.tsx                # Page for managing pricing plans
+│   │   └── overview/                   # Dashboard overview
+│   │       └── page.tsx                # Page for displaying analytics and growth metrics
+│   ├── success/                        # Success page after subscription
+│   │   └── page.tsx                    # Page for subscription success message
+│   ├── subscribe/                      # Subscription page
+│   │   └── page.tsx                    # Page for subscribing to newsletters
+│   └── api/                            # API routes for server-side logic
+│       ├── webhook/                    # Stripe webhook integration
+│       │   └── route.ts                # Webhook handler for Stripe events
+│       └── subscribe/                  # Subscription-related APIs
+│           └── route.ts                # API for adding subscribers
+├── shared/                             # Shared components, hooks, and utilities
+│   ├── components/                     # Reusable UI components
+│   │   ├── cards/                      # Card components
+│   │   │   └── overview.card.tsx       # Overview card for dashboard
+│   │   ├── charts/                     # Chart components
+│   │   │   └── subscribers.chart.tsx   # Subscriber growth chart
+│   │   ├── editor/                     # Drag-and-drop editor components
+│   │   │   └── drag-and-drop-editor.tsx # Drag-and-drop editor for newsletters
+│   │   ├── pricing/                    # Pricing-related components
+│   │   │   └── pricing.card.tsx        # Pricing card for plans
+│   │   └── layout/                     # Layout components
+│   │       └── header.tsx              # Header component
+│   ├── hooks/                          # Custom React hooks
+│   │   ├── useSubscribersData.ts       # Hook for fetching subscriber data
+│   │   └── useSubscribersAnalytics.ts  # Hook for fetching analytics data
+│   ├── utils/                          # Utility functions and constants
+│   │   ├── icons.tsx                   # Icon components
+│   │   └── constants.ts                # Shared constants (e.g., mock data)
+│   └── styles/                         # Shared styles
+│       └── globals.css                 # Global CSS styles
+├── public/                             # Public assets
+│   ├── images/                         # Static images
+│   │   └── logo.png                    # Logo for the platform
+│   └── favicon.ico                     # Favicon for the platform
+├── styles/                             # Project-wide styles
+│   └── globals.css                     # Global CSS styles
+├── .env.local                          # Environment variables for local development
+├── package.json                        # Project dependencies and scripts
+├── README.md                           # Project documentation
+└── tsconfig.json                       # TypeScript configuration
 ```
 
 ---
