@@ -112,7 +112,7 @@ export const sideBarBottomItems: DashboardSideBarTypes[] = [
   },
   {
     title: "View Site",
-    url: "/dashboard",
+    url: "/",
     icon: ICONS.world,
   },
 ];

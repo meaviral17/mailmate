@@ -8,10 +8,12 @@ import { ICONS } from "@/shared/utils/icons";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Main = () => {
   const { user } = useUser();
   const [copied, setCopied] = useState(false);
+  const router = useRouter();
 
   const handleCopyClick = () => {
     const smallText = document.querySelector(".copy-text") as HTMLElement;
@@ -43,24 +45,27 @@ const Main = () => {
           <SubscribersChart />
         </div>
         <div className="w-[35%] p-5">
-          {/* create newsletter button */}
+          {/* Create newsletter button */}
           <div className="w-full flex justify-end">
-            <Button className="bg-purple-700 text-white text-lg rounded !px-6">
+            <Button
+              className="bg-purple-700 text-white text-lg rounded !px-6"
+              onClick={() => router.push("/dashboard/write")}
+            >
               <span className="mr-1 ml-[-5px]">{ICONS.write}</span>
               Start Writing
             </Button>
           </div>
           <br />
-          {/* resources */}
+          {/* Resources */}
           <div>
             <h5 className="text-xl font-medium">Resources</h5>
             <div className="w-full bg-white border rounded p-5 my-3">
-              {/* home page url */}
+              {/* Home page URL */}
               <div>
                 <h4 className="font-medium">Home page</h4>
 
                 <div
-                  className="w-full px-2 my-1 h-[38px] bg-transparent border rounded-lg relative flex items-center cursor-pointer"
+                  className="w-full px-2 my-1 h-[38px] bg-transparent border rounded-lg relative flex items-center cursor-pointer hover:shadow-md transition-shadow"
                   onClick={handleCopyClick}
                 >
                   <small
@@ -80,7 +85,7 @@ const Main = () => {
             </div>
           </div>
 
-          {/* tutorials */}
+          {/* Tutorials */}
           <div className="w-full bg-white border rounded p-5 my-3">
             <h5 className="font-medium">Tutorials</h5>
             <p className="text-sm opacity-[.7]">
@@ -88,7 +93,10 @@ const Main = () => {
               directly from the mailmate team.
             </p>
             <br />
-            <Button className="bg-purple-800 text-[#ffffff] rounded-lg h-[35px] flex items-center">
+            <Button
+              className="bg-purple-800 text-[#ffffff] rounded-lg h-[35px] flex items-center"
+              onClick={() => router.push("/tutorials")}
+            >
               Tutorials <span>{ICONS.link}</span>
             </Button>
           </div>
@@ -96,26 +104,26 @@ const Main = () => {
           {/* Need help? */}
           <div className="w-full bg-white border rounded p-5 my-3">
             <h5 className="font-medium">Need help?</h5>
-            <Link href={"/"}>
-              <div className="w-max px-3 my-2 h-[33px] bg-transparent border rounded-lg flex items-center">
+            <Link href={"/knowledge-base"}>
+              <div className="w-max px-3 my-2 h-[33px] bg-transparent border rounded-lg flex items-center hover:shadow-md transition-shadow">
                 <span className="text-sm">Knowledge base</span>
                 <span className="ml-1">{ICONS.link}</span>
               </div>
             </Link>
-            <Link href={"/"}>
-              <div className="w-max px-3 my-2 h-[33px] bg-transparent border rounded-lg flex items-center">
+            <Link href={"/api-docs"}>
+              <div className="w-max px-3 my-2 h-[33px] bg-transparent border rounded-lg flex items-center hover:shadow-md transition-shadow">
                 <span className="text-sm">API Documentation</span>
                 <span className="ml-1">{ICONS.link}</span>
               </div>
             </Link>
-            <Link href={"/"}>
-              <div className="w-max px-3 my-2 h-[33px] bg-transparent border rounded-lg flex items-center">
+            <Link href={"/blog"}>
+              <div className="w-max px-3 my-2 h-[33px] bg-transparent border rounded-lg flex items-center hover:shadow-md transition-shadow">
                 <span className="text-sm">Blog</span>
                 <span className="ml-1">{ICONS.link}</span>
               </div>
             </Link>
-            <Link href={"/"}>
-              <div className="w-max px-3 my-2 h-[33px] bg-transparent border rounded-lg flex items-center">
+            <Link href={"/faq"}>
+              <div className="w-max px-3 my-2 h-[33px] bg-transparent border rounded-lg flex items-center hover:shadow-md transition-shadow">
                 <span className="text-sm">FAQ</span>
                 <span className="ml-1">{ICONS.link}</span>
               </div>

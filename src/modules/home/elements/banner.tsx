@@ -42,7 +42,7 @@ const Banner = () => {
         />
 
         <div className="absolute text-center px-4">
-          <h1 className="font-clashDisplay uppercase font-bold text-cyber-ink text-[2rem] md:text-[3rem] lg:text-[4rem] xl:text-[5rem] max-w-6xl mx-auto z-10">
+          <h1 className="font-clashDisplay uppercase font-bold text-cyber-ink text-[2rem] md:text-[3rem] lg:text-[4rem] xl:text-[4rem] max-w-6xl mx-auto z-10">
             THE ULTIMATE AI NEWSLETTER PLATFORM BUILT FOR <span className="font-style">GROWTH</span>
           </h1>
 
