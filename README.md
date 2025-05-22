@@ -2,7 +2,6 @@
 Welcome to **MailMate**, a cutting-edge AI-powered newsletter platform designed for creators, backed by experts. MailMate empowers users to create, manage, and grow their audience with ease, leveraging advanced analytics, seamless integrations, and a user-friendly interface.
 
 ---
-
 ## **Overview**
 
 MailMate is a modern newsletter platform that combines **AI-driven insights** with a seamless user experience. Whether you're a content creator, marketer, or business owner, MailMate helps you:
