@@ -1,22 +1,6 @@
 # **MailMate: The Ultimate AI Newsletter Platform**
-
 Welcome to **MailMate**, a cutting-edge AI-powered newsletter platform designed for creators, backed by experts. MailMate empowers users to create, manage, and grow their audience with ease, leveraging advanced analytics, seamless integrations, and a user-friendly interface.
-
----
-
-## **Table of Contents**
-1. Overview
-2. Features
-3. [Tech Stack](#tech-stack)
-4. Architecture
-5. Installation
-6. Usage
-7. [Folder Structure](#folder-structure)
-8. Environment Variables
-9. Contributing
-10. License
-11. [About the Developer](#about-the-developer)
-
+## Demo Video
 ---
 
 ## **Overview**
@@ -29,6 +13,19 @@ MailMate is a modern newsletter platform that combines **AI-driven insights** wi
 
 The platform is designed with **scalability**, **performance**, and **user-centric design** in mind, making it a one-stop solution for all your newsletter needs.
 
+---
+
+## **Table of Contents**
+1. Features
+2. [Tech Stack](#tech-stack)
+3. Architecture
+4. Installation
+5. Usage
+6. [Folder Structure](#folder-structure)
+7. Environment Variables
+8. Contributing
+9. License
+10. [About the Developer](#about-the-developer)
 ---
 
 ## **Features**
