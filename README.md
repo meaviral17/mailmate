@@ -12,19 +12,16 @@ MailMate is a modern newsletter platform that combines **AI-driven insights** wi
 
 The platform is designed with **scalability**, **performance**, and **user-centric design** in mind, making it a one-stop solution for all your newsletter needs.
 
----
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-0EA5E9?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Stripe](https://img.shields.io/badge/Stripe-635BFF?style=for-the-badge&logo=stripe&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Clerk](https://img.shields.io/badge/Clerk-F02E65?style=for-the-badge&logo=clerk&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 
-## **Table of Contents**
-1. Features
-2. [Tech Stack](#tech-stack)
-3. Architecture
-4. Installation
-5. Usage
-6. [Folder Structure](#folder-structure)
-7. Environment Variables
-8. Contributing
-9. License
-10. [About the Developer](#about-the-developer)
 ---
 
 ## **Features**
@@ -90,9 +87,13 @@ MailMate is built with a modern tech stack to ensure performance, scalability, a
 - **React Hot Toast**: For real-time notifications.
 - **Timeago.js**: For formatting timestamps in a human-readable format.
 
+### **Amazon Web Services**
+- **AWS Simple Emal Service**: For sending transactional and newsletter emails reliably.
+
 ### **DevOps**
 - **Vercel**: For hosting and deployment.
 - **ESLint & Prettier**: For code quality and formatting.
+
 
 ---
 
