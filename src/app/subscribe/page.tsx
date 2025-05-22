@@ -32,12 +32,17 @@ const Page = () => {
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center h-screen">
-      <div>
-        <h1 className="text-7xl pb-8 capitalize">{username} NewsLetter</h1>
+    <div className="w-full flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-50 to-blue-100">
+      <div className="text-center mb-8">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-blue-700 capitalize">
+          {username} Newsletter
+        </h1>
+        <p className="text-gray-600 mt-4 text-lg md:text-xl">
+          Stay updated with the latest news and updates from {username}.
+        </p>
       </div>
       <form
-        className="flex w-full max-w-md border rounded overflow-hidden"
+        className="flex flex-col md:flex-row w-full max-w-lg bg-white shadow-lg rounded-lg overflow-hidden"
         onSubmit={(e) => handleSubmit(e)}
       >
         <input
@@ -47,16 +52,21 @@ const Page = () => {
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="Enter your email"
-          className="px-4 py-4 w-full text-gray-700 leading-tight focus:outline-none"
+          className="px-4 py-3 w-full text-gray-700 border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
           type="submit"
           disabled={loading}
-          className="px-8 bg-blue-500 text-white font-bold py-4 rounded-r hover:bg-blue-600 focus:outline-none"
+          className={`px-6 py-3 bg-blue-500 text-white font-semibold hover:bg-blue-600 focus:outline-none transition-all ${
+            loading ? "opacity-50 cursor-not-allowed" : ""
+          }`}
         >
-          Subscribe
+          {loading ? "Subscribing..." : "Subscribe"}
         </button>
       </form>
+      <p className="text-gray-500 mt-4 text-sm">
+        We respect your privacy. Unsubscribe anytime.
+      </p>
     </div>
   );
 };

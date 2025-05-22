@@ -1,10 +1,22 @@
+"use client";
 import { Button } from "@nextui-org/button";
 import Image from "next/image";
 import React from "react";
+import { useRouter } from "next/navigation"; // Import useRouter
 
 const Banner = () => {
+  const router = useRouter(); // Initialize useRouter
+
+  const handleGuestMode = () => {
+    router.push("/dashboard"); // Navigate to /dashboard
+  };
+
+  const handleLogin = () => {
+    router.push("/sign-in"); // Navigate to /sign-in
+  };
+
   return (
-    <div className="bg-[#F4E7E1] h-[95vh]"> {/* ← Changed background to light blue */}
+    <div className="bg-[#F4E7E1] h-[95vh]">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="214"
@@ -30,15 +42,26 @@ const Banner = () => {
         />
 
         <div className="absolute text-center px-4">
-          <h1 className="font-clashDisplay uppercase font-bold text-cyber-ink text-[2.75rem] md:text-[7xl] lg:text-[4rem] xl:text-[5.75rem] max-w-4xl mx-auto z-10">
+          <h1 className="font-clashDisplay uppercase font-bold text-cyber-ink text-[2rem] md:text-[3rem] lg:text-[4rem] xl:text-[5rem] max-w-6xl mx-auto z-10">
             THE ULTIMATE AI NEWSLETTER PLATFORM BUILT FOR <span className="font-style">GROWTH</span>
           </h1>
 
           <h3 className="text-3xl mt-6">Built for creators. Backed by experts.</h3>
 
-          <div className="flex w-full justify-center mt-6">
-            <Button color="secondary" className="text-xl !p-8">
-              Get Started
+          <div className="flex w-full justify-center mt-6 gap-x-2">
+            <Button
+              color="secondary"
+              className="text-xl !p-6"
+              onClick={handleGuestMode} // Navigate to /dashboard
+            >
+              Get Started as Guest
+            </Button>
+            <Button
+              color="secondary"
+              className="text-xl !p-6"
+              onClick={handleLogin} // Navigate to /sign-in
+            >
+              Login
             </Button>
           </div>
 
